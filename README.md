@@ -1,10 +1,19 @@
 This is the front-end for the project Web Visualisation of Satellite Images. 
 
 Here are the contact details of the rest of the team:
+
+
 Bogdan Iordache - bogdanmihai453@gmail.com
+
+
 Cristi Dobos - c.c.dobos@gmail.com
+
+
 Sophie Schaaf - Sophie@langeveld.me
+
+
 Sorana Stan - sorana.a.stan10@gmail.com
+
 
 React Node.js Docker Starter
 
