@@ -1,0 +1,182 @@
+/* Basic styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Container for the entire page */
+.map-page-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  position: relative;
+}
+
+/* Map container */
+.map-container {
+  grid-row: 2;
+  position: relative;
+  overflow: hidden;
+  
+}
+
+/* Map component itself */
+.map-component {
+  width: 100%;
+  height: 70vh;
+}
+
+/* Controls container at the bottom */
+.controls-container {
+  grid-row: 3;
+  background-color: #2d3748; /* Tailwind's bg-gray-800 */
+  padding: 1rem; /* Tailwind's p-4 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  height: 25vh
+}
+
+/* Each control item */
+.control-item {
+  flex-grow: 1;
+  margin: 0 0.5rem; /* Adjust spacing between controls */
+}
+
+/* Ensure control items don’t overflow */
+.control-item > * {
+  width: 100%;
+}
+
+/* Popup styles */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* Ensure popup is above everything else */
+}
+
+.inset-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c; /* Tailwind's bg-gray-900 */
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.text-white {
+  color: white;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748; /* Tailwind's bg-gray-800 */
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.rounded-l-lg {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-r-lg {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.bg-green-500 {
+  background-color: #48bb78; /* Tailwind's bg-green-500 */
+}
+
+.bg-gray-700 {
+  background-color: #4a5568; /* Tailwind's bg-gray-700 */
+}
+
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Match the color of other buttons */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.home-button:hover {
+  background-color: #0056b3; /* Darken on hover */
+}

@@ -1,0 +1,37 @@
+before_script:
+  - apk update
+  - apk add curl
+  - apk add nodejs npm
+
+stages:
+  - test
+  - build
+
+build:
+  stage: build
+  script:
+    - echo "Building the project..."
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+test:
+  image: cypress/base:16.18.0
+  stage: test
+  before_script:
+    - apt-get update
+    - apt-get install -y xvfb
+    - RANDOM_DISPLAY_PORT_NUMBER=$(shuf -i 10-98 -n 1)
+    - Xvfb :"$RANDOM_DISPLAY_PORT_NUMBER" -screen 0 1920x1080x24 & # Start Xvfb
+    - export CYPRESS_DISPLAY=:"$RANDOM_DISPLAY_PORT_NUMBER" # Set display environment variable
+  script:
+    # install dependencies
+    - npm ci
+    # start the server in the background
+    - npm start &
+    # wait for the server to start
+    - sleep 10
+    # run Cypress tests
+    - npm run test:all

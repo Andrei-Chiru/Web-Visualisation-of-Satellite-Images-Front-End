@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri", "Trebuchet MS", "Ubuntu", Serif;
+    font-size: 11pt;
+}
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.control-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    font-size: 12pt;
+    z-index: 1000;
+    width: 225px;
+}
+.control-container h4 {
+    margin: 0 0 10px;
+    font-size: 14pt;
+    text-align: center;
+}
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+#opacity-slider-container {
+    display: none; /* Initially hide the opacity slider container */
+}
+
+.region-label {
+    font-family: Arial, sans-serif; /* Set a readable font */
+    font-size: 20px; /* Increase font size for readability */
+    font-weight: bold; /* Make the font bold */
+    color: black; /* Ensure the text color is readable */
+    text-shadow: 10px 10px 10px deepskyblue; /* Add a slight shadow for contrast */
+}
+
+.region-highlight {
+    fill-opacity: 0.5;
+    fill-color: #ff0;
+    color: #666;
+    weight: 5;
+}
+
+.region-label div {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.region-label div:hover {
+    color: #ff0;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000;
+}

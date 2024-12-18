@@ -1,0 +1,32 @@
+.columned { 
+    flex-direction: column;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.rowed{
+    flex-direction: row; 
+    background-color: #374151; 
+    padding: 1rem;
+    border-radius: 0.5rem; 
+    height: 11rem; 
+    display: flex; 
+    justify-content: center; 
+}
+.item_in_column{
+    margin-bottom: 0.7rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.button{
+    background-color: white;
+    color: #2d3748;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+.button:hover{
+    background-color: lightgray;
+}
