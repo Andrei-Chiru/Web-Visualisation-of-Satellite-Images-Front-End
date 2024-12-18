@@ -1,7 +1,10 @@
 This is the front-end for the project Web Visualisation of Satellite Images. 
 
-Here are the contact details of the rest of the team:
+This project could not have been made possible without project submission and guidance from Digital Lights.
 
+https://lights.digital/
+
+Here are the contact details of the rest of the team:
 
 Bogdan Iordache - bogdanmihai453@gmail.com
 
